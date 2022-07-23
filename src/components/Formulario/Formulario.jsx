@@ -30,7 +30,7 @@ export function Formulario({ aoEnviar }) {
           margin="normal"
           onChange={(event) => setTitulo(event.target.value)}
           onBlur={(event) => {
-            titulo.length <= 3 ? setErro(true) : setErro(false);
+            titulo.length < 3 ? setErro(true) : setErro(false);
           }}
           error={erro}
           helperText={erro === true ? "Insira pelo menos 3 caracteres" : ""}
