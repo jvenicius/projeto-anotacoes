@@ -47,7 +47,12 @@ export function Formulario({ aoEnviar }) {
           onChange={(event) => setConteudo(event.target.value)}
           fullWidth
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          disabled={erro}
+        >
           Salvar
         </Button>
       </form>
@@ -57,13 +62,13 @@ export function Formulario({ aoEnviar }) {
         autoHideDuration={6000}
         onClose={handleClick}
         anchorOrigin={{
-          vertical: "top",
+          vertical: "bottom",
           horizontal: "right",
         }}
       >
         <Alert
           onClose={handleClick}
-          variant="outlined"
+          variant="filled"
           severity="success"
           sx={{ width: "100%" }}
         >

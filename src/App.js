@@ -1,22 +1,15 @@
-import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
-import { Container, Typography } from "@mui/material";
-import Formulario from "./components/Formulario";
+import { Container } from "@mui/material";
+import NavBar from "./components/NavBar";
+import "./assets/index.css";
 import "fontsource-roboto";
 
 function App() {
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h3" component="h1" align="center">
-        Projeto Anotações
-      </Typography>
-      <AddCircleOutlinedIcon />
-      <Formulario aoEnviar={aoEnviarForm} />
-    </Container>
+    <>
+      <NavBar />
+      <Container maxWidth="sm"></Container>
+    </>
   );
-}
-
-function aoEnviarForm(dados) {
-  console.log(dados);
 }
 
 export default App;
