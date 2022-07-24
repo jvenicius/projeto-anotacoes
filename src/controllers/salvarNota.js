@@ -1,4 +1,4 @@
-function aoEnviarFormulario(dados) {
+function salvarNota(dados) {
   console.log(dados);
   localStorage.setItem(
     "titulo",
@@ -14,9 +14,6 @@ function aoEnviarFormulario(dados) {
       dados.conteudo,
     ])
   );
-  const titulos = JSON.parse(localStorage.getItem("titulo"));
-  const conteudos = JSON.parse(localStorage.getItem("conteudos"));
-  console.log(titulos, conteudos);
 }
 
-export default aoEnviarFormulario;
+export default salvarNota;
